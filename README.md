@@ -3,5 +3,5 @@ This is a simple install script suitable when you have installed a minimal arch 
 
 How to run it:
 ``
-git clone https://github.com/mackilanu/archscript/ && cd archscript && ./install.sh
+git clone https://github.com/mackilanu/archscript.git && cd archscript && ./install.sh
 ``
