@@ -18,7 +18,7 @@ mv ~/dot/.vimrc ~/.vimrc
 
 #Install i3 and configuring it...
 echo Installing i3 and configuring...
-sudo pacman -S i3-gaps i3status i3lock i3status rofi picom network-manager-applet blueman blueman feh xorg-xinit dunst firefox linux-lts
+sudo pacman -S i3-gaps i3status i3lock i3status rofi picom network-manager-applet blueman blueman feh xorg xorg-xinit dunst firefox linux-lts
 mkdir -pv ~/.config/i3
 mv ~/dot/i3_config ~/.config/i3/config
 sudo mv ~/dot/picom_config /etc/xdg/picom.conf
