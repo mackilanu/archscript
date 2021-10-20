@@ -31,4 +31,9 @@ sudo pacman -S terminator
 mkdir ~/.config/terminator
 mv ~/dot/terminator_config ~/config/terminator/config
 
+
+echo Enabling some systemd stuff..
+sudo systemctl enable NetworkManager
+sudo systemctl enable bluetooth
+
 echo All done! Restart, login and run startx!
