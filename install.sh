@@ -13,7 +13,7 @@ rm -rf yay/
 mkdir Pictures
 mkdir Videos
 mkdir Music
-mkdir Dicuments
+mkdir Documents
 mkdir Templates
 
 #Install vim and it's configuration
