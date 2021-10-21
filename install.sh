@@ -44,6 +44,9 @@ sudo pacman -S terminator
 mkdir ~/.config/terminator
 mv ~/dot/terminator_config ~/config/terminator/config
 
+#Configure bashrc
+mv ~/dot/.bashrc ~
+
 echo Enabling some systemd stuff..
 sudo systemctl enable NetworkManager
 sudo systemctl enable bluetooth
