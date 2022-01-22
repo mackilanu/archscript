@@ -2,9 +2,12 @@
 
 #Configure system
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/mackilanu/dot.git
+
 sudo ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
 
-sudo hwclock hwclock --systohc
+sudo hwclock --systohc
 
 sudo cp  /etc/locale.gen /etc/locale.gen.backup
 sudo sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
@@ -46,8 +49,6 @@ mkdir Templates
 echo Installing vim config...
 sudo pacman -S vim git
 mkdir -vp ~/.vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/mackilanu/dot.git
 mv ~/dot/.vimrc ~/.vimrc
 
 #Install i3 and configuring it...
