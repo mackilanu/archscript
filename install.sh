@@ -1,5 +1,31 @@
 #!/bin/bash
 
+#Configure system
+
+sudo ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
+
+sudo hwclock hwclock --systohc
+
+sudo cp  /etc/locale.gen /etc/locale.gen.backup
+sudo sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
+
+sudo locale-gen
+
+sudo mv ~/dot/locale.conf /etc/locale.conf
+
+sudo mv ~/dot/vconsole.conf /etc/vconsole.conf
+
+sudo mv  ~/dot/hostname /etc/hostname
+
+sudo mv ~/dot/login /etc/pam.d
+
+#Installing grub
+sudo pacman -S grub efibootmgr os-prober
+
+sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
 #Install yay
 echo Installing yay...
 sudo pacman -S --needed git base-devel
@@ -32,6 +58,8 @@ mv ~/dot/i3_config ~/.config/i3/config
 sudo mv ~/dot/picom_config /etc/xdg/picom.conf
 mv ~/dot/bg.jpg ~/Pictures
 mv ~/dot/.xinitrc ~
+
+mv ~/dot/.Xresources ~
 
 #Configuring reflector
 echo Configuring reflector...
